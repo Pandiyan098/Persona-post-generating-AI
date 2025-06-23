@@ -1,0 +1,134 @@
+/* Share Modal */
+.share-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.share-modal-content {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary-purple);
+}
+
+.close-modal-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text--tertiary);
+  font-size: 1.25rem;
+}
+
+/* Social Icons */
+.social-icons-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-icon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.social-icon-btn:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.social-label {
+  font-size: 0.75rem;
+  color: var(--text--secondary);
+}
+
+/* Platform Specific Colors */
+.whatsapp .social-icon {
+  color: #25D366;
+}
+
+.instagram .social-icon {
+  color: #E1306C;
+}
+
+.facebook .social-icon {
+  color: #1877F2;
+}
+
+.snapchat .social-icon {
+  color: #FFFC00;
+  text-shadow: 0 0 1px #000; /* Add shadow for better visibility on yellow */
+}
+
+.twitter .social-icon {
+  color: #1DA1F2;
+}
+
+.linkedin .social-icon {
+  color: #0077B5;
+}
+
+.telegram .social-icon {
+  color: #0088CC;
+}
+
+.pinterest .social-icon {
+  color: #E60023;
+}
+
+.email .social-icon {
+  color: #EA4335;
+}
+
+/* Interests Grid */
+/* .interests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+} */
+ /* Responsive adjustments */
+@media (max-width: 600px) {
+  .social-icons-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on smaller screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .social-icons-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
+  }
+}

@@ -1,0 +1,122 @@
+.interests-page {
+    min-height: 100vh;
+    background-color: #f8fafc;
+    padding-top: 80px; /* Space for navbar */
+  }
+  
+  .interests-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .interests-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .interests-header h1 {
+    font-size: 2.5rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+  }
+  
+  .interests-header p {
+    font-size: 1.1rem;
+    color: #64748b;
+  }
+  
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  
+  .interest-card {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+  }
+  
+  .interest-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .interest-card.selected {
+    border-color: var(--selected-color, #3b82f6);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  .interest-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: white;
+  }
+  
+  .interest-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  
+  .selected-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #10b981;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .check-icon {
+    stroke-width: 3px;
+  }
+  
+  .continue-button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background-color: #e2e8f0;
+    color: #64748b;
+    border: none;
+    cursor: not-allowed;
+    transition: all 0.3s ease;
+  }
+  
+  .continue-button.active {
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .continue-button.active:hover {
+    background-color: #2563eb;
+    transform: translateY(-2px);
+  }
